@@ -1,4 +1,4 @@
-# electron-quick-start-typescript
+~~# electron-quick-start-typescript~~ # this will potentially amount to something
 
 **Clone and run for a quick way to see Electron in action.**
 
