@@ -12,10 +12,11 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../index.html"));
+  mainWindow.loadFile(path.join(__dirname, "../src/public/index.html"));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+  console.log(__dirname);
 }
 
 // This method will be called when Electron has finished
