@@ -5,10 +5,12 @@
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
     "sourceMap": true,
     "outDir": "dist",
+    "rootDir": "src",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]

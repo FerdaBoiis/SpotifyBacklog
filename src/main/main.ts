@@ -1,18 +1,20 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
 
+import testFunction from "../services/auth-service";
+
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "../renderer/preload.js"),
     },
     width: 800,
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../src/public/index.html"));
+  mainWindow.loadFile(path.join(__dirname, "../../src/public/index.html"));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
@@ -30,6 +32,8 @@ app.on("ready", () => {
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
+
+  console.log(testFunction());
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
